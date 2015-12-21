@@ -1,0 +1,21 @@
+{
+  "name": "releasemanagement",
+  "homepage": "https://github.com/timsommer/releasemanagement",
+  "authors": [
+    "Tim Sommer <tim.sommer@outlook.be>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
