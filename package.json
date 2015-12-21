@@ -4,8 +4,10 @@
   "description": "",
   "main": "src/server/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server/app.js"
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "start": "concurrent \"npm run tsc:w\" \"node src/server/app.js\" "
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,17 @@
     "lodash": "^3.10.1",
     "mongodb": "^2.0.52",
     "morgan": "^1.6.1",
-    "url": "^0.11.0"
+    "url": "^0.11.0",    
+    "angular2": "^2.0.0-beta.0",
+    "systemjs": "^0.19.8",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.13",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.0",
+    "zone.js": "^0.5.10"
+  },
+  "devDependencies": {
+    "concurrently": "^1.0.0",
+    "typescript": "^1.7.3"
   }
 }

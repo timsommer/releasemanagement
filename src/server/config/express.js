@@ -31,6 +31,7 @@ module.exports = function(app) {
     
     //app.use(bodyParser());
     app.use(express.static(appPath + '/src/public'));
+    app.use(express.static(appPath + '/node_modules'));
 
     // Catch all route regarding entries to work with the html5mode of Angular
     app.use('/entries', function(req, res) {
