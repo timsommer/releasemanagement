@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/server/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server/app.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,14 @@
   },
   "homepage": "https://github.com/timsommer/releasemanagement#readme",
   "dependencies": {
+    "compression": "^1.6.0",
+    "errorhandler": "^1.4.2",
+    "express": "^4.13.3",
+    "fs": "0.0.2",
     "http": "0.0.0",
+    "lodash": "^3.10.1",
+    "mongodb": "^2.0.52",
+    "morgan": "^1.6.1",
     "url": "^0.11.0"
   }
 }
