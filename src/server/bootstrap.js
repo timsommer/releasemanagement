@@ -1,5 +1,6 @@
 'use strict';
 var express = require('express');
+var expressConfig = require('./config/express');
 var appPath = process.cwd();
 function init() {
     function bootstrapModels() {
@@ -12,7 +13,7 @@ function init() {
     bootstrapModels();
     // Express settings
     var app = express();
-    require(appPath + '/src/server/config/express')(app);
+    expressConfig.config(app);
     return app;
 }
 exports.init = init;

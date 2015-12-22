@@ -1,6 +1,7 @@
 'use strict';
 
 import * as express from 'express';
+import * as expressConfig from './config/express';
 
 var appPath = process.cwd();
  
@@ -19,7 +20,7 @@ export function init () : express.Express {
     // Express settings
     var app = express();
 
-    require(appPath + '/src/server/config/express')(app);
+    expressConfig.config(app);
 
     return app;
 }

@@ -1,7 +1,7 @@
 'use strict';
 
-import fs = require('fs');
-import path = require('path');
+import * as fs from 'fs';
+import * as path from 'path';
 
 // recursively walk modules path and callback for each file
 export function walk (modulesPath : string, excludeDir: string, callback: (newPath: string) => void) {
