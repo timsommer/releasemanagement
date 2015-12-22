@@ -1,7 +1,7 @@
 'use strict';
 
 //npm packages without ts support 
-var _ = require('lodash');
+import _ = require('lodash');
 
 //npm pacakges with ts support
 import * as fs from 'fs';
@@ -37,8 +37,9 @@ export function getCurrentEnvironmentConfiguration (): IConfiguration {
 
     // Extend the base configuration in all.js with environment
     // specific configuration
+    
     return _.extend(
         require('./env/all'),
         require('./env/' + process.env.NODE_ENV) || {}
-    );
+    ) as IConfiguration;
 }
