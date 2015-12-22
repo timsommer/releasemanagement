@@ -31,7 +31,8 @@ function config(app) {
         // used and shared by routes as further middlewares and is not a
         // route by itself
         util.walk(appPath + '/src/server/routes', 'middlewares', function (path) {
-            require(path)(app);
+            console.info('configuring route for ' + path);
+            require(path).configureRoute(app);
         });
     })();
     app.use('/*', function (req, res, next) {

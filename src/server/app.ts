@@ -1,11 +1,9 @@
-///<reference path="./config/configuration.ts" />
-
 'use strict';
 
 /**
  * Module dependencies.
  */
-import configuration = require('./config/configuration');
+import configuration = require('./config/global');
 
 
 /**
@@ -15,7 +13,7 @@ import configuration = require('./config/configuration');
 import bootstrapper = require('./bootstrap');
 
 var app = bootstrapper.init(),
-    environmentConfig = configuration.getCurrentEnvironmentConfiguration();
+    environmentConfig = configuration.getGlobalConfig();
 
 // Start the app by listening on <port>, optional hostname
 app.listen(environmentConfig.port, environmentConfig.hostname);
